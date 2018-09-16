@@ -1,6 +1,8 @@
 package com.company;
 
+import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -20,11 +22,13 @@ public class Main extends Application {
 
 
     private Direction direction = Direction.RIGHT;
-    private boolean moved = false;
-    private boolean running = false;
+    private boolean hasMoved = false;
+    private boolean isRunning = false;
 
+    private Timeline timeline = new Timeline();
 
-
+    private ObservableList<Node> snake;
+    
 
     private Parent makePage(){
         Pane root = new Pane();
