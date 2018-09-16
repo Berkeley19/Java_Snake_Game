@@ -178,9 +178,10 @@ public class Main extends Application {
 
             hasMoved = false;
         });
-        primaryStage.setTitle("Snake game");
+        primaryStage.setTitle("Berkeley's Snake game");
         primaryStage.setScene(scene);
         primaryStage.show();
+        startGame();
     }
 
     public static void main(String[] args) {
