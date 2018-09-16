@@ -1,5 +1,6 @@
 package com.company;
 
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -11,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
 
 
 import java.awt.*;
@@ -26,6 +28,7 @@ public class Main extends Application {
     public static final int dotSize = 30;
     public static final int appHeight = 30 * dotSize;
     public static final int appWidth = 20 * dotSize;
+    public static double difficulty = 0.2;
 
 
     private Direction direction = Direction.RIGHT;
@@ -47,6 +50,22 @@ public class Main extends Application {
         food.setFill(Color.RED);
         food.setTranslateX((int)(Math.random() * (appWidth-dotSize)) / dotSize * dotSize);
         food.setTranslateY((int)(Math.random() * (appHeight-dotSize)) / dotSize * dotSize);
+
+        KeyFrame frame = new KeyFrame(Duration.seconds(difficulty), event -> {
+
+            if(!isRunning){
+                return;
+            }
+
+            boolean toRemove = snake.size() > 1;
+
+            Node tailBecomesHead = toRemove ? snake.remove(snake.size()-1) : snake.get(0);
+
+            double tailX = tailBecomesHead.getTranslateX();
+            double tailY = tailBecomesHead.getTranslateY();
+
+            
+        });
 
 
         return root;
