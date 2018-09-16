@@ -14,6 +14,15 @@ public class Main extends Application {
         UP, DOWN, LEFT, RIGHT
     }
 
+    public static final int dotSize = 30;
+    public static final int appHeight = 30 * dotSize;
+    public static final int appWidth = 20 * dotSize;
+
+    
+
+
+
+
     private Parent makePage(){
         Pane root = new Pane();
 
