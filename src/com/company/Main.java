@@ -86,9 +86,25 @@ public class Main extends Application {
                     tailBecomesHead.setTranslateY(snake.get(0).getTranslateY());
                     break;
             }
+            hasMoved = true;
 
-            
-        });
+            if(toRemove)snake.add(0, tailBecomesHead);
+
+            //hits itself restart
+            for(Node rect: snake){
+                if(rect != tailBecomesHead && tailBecomesHead.getTranslateX() == rect.getTranslateX()
+                        && tailBecomesHead.getTranslateY() == rect.getTranslateY()){
+                    restartGame();
+                    break;
+                }
+            }
+
+
+            });
+
+            if()
+
+
 
 
         return root;
