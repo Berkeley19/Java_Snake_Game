@@ -123,9 +123,25 @@ public class Main extends Application {
         timeline.getKeyFrames().add(frame);
         timeline.setCycleCount(Timeline.INDEFINITE);
 
-        
+        //add nodes to appear
+        root.getChildren().addAll(food, snakeBody);
         return root;
     }
+
+    public void restartGame(){
+        //stopGame function
+        //startGame function
+    }
+
+    public void stopGame(){
+
+    }
+
+    public void startGame(){
+        
+    }
+
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
