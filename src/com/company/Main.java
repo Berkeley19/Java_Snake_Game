@@ -92,16 +92,16 @@ public class Main extends Application {
 
             //hits itself restart
             for(Node rect: snake){
-                if(rect != tailBecomesHead && tailBecomesHead.getTranslateX() == rect.getTranslateX()
-                        && tailBecomesHead.getTranslateY() == rect.getTranslateY()){
+                if(rect != tailBecomesHead && tailX == rect.getTranslateX()
+                        && tailY == rect.getTranslateY()){
                     restartGame();
                     break;
                 }
             }
 
             //hits edge or goes out of bounds
-            if(tailBecomesHead.getTranslateX() < 0 || tailBecomesHead.getTranslateX() >= appWidth
-                || tailBecomesHead.getTranslateY() < 0 || tailBecomesHead.getTranslateY() >= appHeight){
+            if(tailX < 0 || tailX >= appWidth
+                || tailY < 0 || tailY >= appHeight){
                 restartGame();
             }
 
