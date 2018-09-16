@@ -134,11 +134,15 @@ public class Main extends Application {
     }
 
     public void stopGame(){
-
+        
     }
 
     public void startGame(){
-        
+        direction = Direction.LEFT;
+        Rectangle head = new Rectangle(dotSize, dotSize);
+        snake.add(head);
+        timeline.play();
+        isRunning = true;
     }
 
 
