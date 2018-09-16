@@ -129,8 +129,8 @@ public class Main extends Application {
     }
 
     public void restartGame(){
-        //stopGame function
-        //startGame function
+        stopGame();
+        startGame();
     }
 
     public void stopGame(){
