@@ -119,9 +119,11 @@ public class Main extends Application {
             }
             });
 
+        //only one frame, always run
+        timeline.getKeyFrames().add(frame);
+        timeline.setCycleCount(Timeline.INDEFINITE);
 
-
-
+        
         return root;
     }
 
