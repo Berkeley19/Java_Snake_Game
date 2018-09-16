@@ -3,10 +3,12 @@ package com.company;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 
 
 public class Main extends Application {
@@ -31,6 +33,12 @@ public class Main extends Application {
 
     private Parent makeGame(){
         Pane root = new Pane();
+        root.setPrefSize(appWidth, appHeight);
+
+        Group snakeBody = new Group();
+        snake = snakeBody.getChildren();
+
+        
 
         return root;
     }
