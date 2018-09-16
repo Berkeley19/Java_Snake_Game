@@ -9,6 +9,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+
+import java.awt.*;
 
 
 public class Main extends Application {
@@ -38,7 +43,11 @@ public class Main extends Application {
         Group snakeBody = new Group();
         snake = snakeBody.getChildren();
 
-        
+        Rectangle food = new Rectangle(dotSize, dotSize);
+        food.setFill(Color.RED);
+        food.setTranslateX((int)(Math.random() * (appWidth-dotSize)) / dotSize * dotSize);
+        food.setTranslateY((int)(Math.random() * (appHeight-dotSize)) / dotSize * dotSize);
+
 
         return root;
     }
