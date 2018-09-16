@@ -105,6 +105,9 @@ public class Main extends Application {
                 restartGame();
             }
 
+            if(tailX == food.getTranslateX() && tailY == food.getTranslateY()){
+                
+            }
             });
 
 
