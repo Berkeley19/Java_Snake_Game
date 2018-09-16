@@ -18,7 +18,10 @@ public class Main extends Application {
     public static final int appHeight = 30 * dotSize;
     public static final int appWidth = 20 * dotSize;
 
-    
+
+    private Direction direction = Direction.RIGHT;
+    private boolean moved = false;
+    private boolean running = false;
 
 
 
