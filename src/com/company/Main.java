@@ -134,7 +134,8 @@ public class Main extends Application {
     }
 
     public void stopGame(){
-        
+        isRunning = false;
+        timeline.stop();
     }
 
     public void startGame(){
