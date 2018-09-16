@@ -99,10 +99,13 @@ public class Main extends Application {
                 }
             }
 
+            //hits edge or goes out of bounds
+            if(tailBecomesHead.getTranslateX() < 0 || tailBecomesHead.getTranslateX() >= appWidth
+                || tailBecomesHead.getTranslateY() < 0 || tailBecomesHead.getTranslateY() >= appHeight){
+                restartGame();
+            }
 
             });
-
-            if()
 
 
 
