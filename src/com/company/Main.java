@@ -166,14 +166,17 @@ public class Main extends Application {
                     if(direction != Direction.RIGHT) {
                         direction = Direction.LEFT;
                     }
+                    break;
                 case RIGHT:
                     if(direction != Direction.LEFT){
                         direction = Direction.RIGHT;
                     }
+                    break;
                 case DOWN:
                     if(direction != Direction.UP){
                         direction = Direction.DOWN;
                     }
+                    break;
             }
 
             hasMoved = false;
