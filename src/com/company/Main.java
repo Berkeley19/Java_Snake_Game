@@ -152,6 +152,32 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Scene scene = new Scene(makeGame());
+        scene.setOnKeyPressed(event -> {
+            if(!hasMoved){
+                return;
+            }
+            switch (event.getCode()){
+                case UP:
+                    if (direction != Direction.DOWN) {
+                        direction = Direction.UP;
+                    }
+                    break;
+                case LEFT:
+                    if(direction != Direction.RIGHT) {
+                        direction = Direction.LEFT;
+                    }
+                case RIGHT:
+                    if(direction != Direction.LEFT){
+                        direction = Direction.RIGHT;
+                    }
+                case DOWN:
+                    if(direction != Direction.UP){
+                        direction = Direction.DOWN;
+                    }
+            }
+
+            hasMoved = false;
+        });
         primaryStage.setTitle("Snake game");
         primaryStage.setScene(scene);
         primaryStage.show();
