@@ -25,6 +25,10 @@ public class Main extends Application {
         UP, DOWN, LEFT, RIGHT
     }
 
+    /*public enum translateType{
+        X, Y
+    }*/
+
     public static final int dotSize = 30;
     public static final int appHeight = 30 * dotSize;
     public static final int appWidth = 20 * dotSize;
@@ -63,6 +67,25 @@ public class Main extends Application {
 
             double tailX = tailBecomesHead.getTranslateX();
             double tailY = tailBecomesHead.getTranslateY();
+
+            switch(direction){
+                case UP:
+                    tailBecomesHead.setTranslateX(snake.get(0).getTranslateX());
+                    tailBecomesHead.setTranslateY(snake.get(0).getTranslateY() - dotSize);
+                    break;
+                case DOWN:
+                    tailBecomesHead.setTranslateX(snake.get(0).getTranslateX());
+                    tailBecomesHead.setTranslateY(snake.get(0).getTranslateY() + dotSize);
+                    break;
+                case RIGHT:
+                    tailBecomesHead.setTranslateX(snake.get(0).getTranslateX() + dotSize);
+                    tailBecomesHead.setTranslateY(snake.get(0).getTranslateY());
+                    break;
+                case LEFT:
+                    tailBecomesHead.setTranslateX(snake.get(0).getTranslateX() - dotSize);
+                    tailBecomesHead.setTranslateY(snake.get(0).getTranslateY());
+                    break;
+            }
 
             
         });
