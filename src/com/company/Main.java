@@ -9,6 +9,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
+    public enum Direction {
+        UP, DOWN, LEFT, RIGHT
+    }
+
     private Parent makePage(){
         Pane root = new Pane();
 
