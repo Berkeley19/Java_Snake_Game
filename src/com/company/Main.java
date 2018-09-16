@@ -105,7 +105,7 @@ public class Main extends Application {
                 restartGame();
             }
 
-            //snake eats food, food goes to another area
+            //snake eats food, food goes to another area, snake body enlarges by dot value
             if(tailX == food.getTranslateX() && tailY == food.getTranslateY()){
                 food.setTranslateX((int)(Math.random() * (appWidth-dotSize)) / dotSize * dotSize);
                 food.setTranslateY((int)(Math.random() * (appHeight-dotSize)) / dotSize * dotSize);
@@ -113,6 +113,8 @@ public class Main extends Application {
                 Rectangle rect = new Rectangle(dotSize, dotSize);
                 rect.setTranslateX(tailX);
                 rect.setTranslateY(tailY);
+
+                snake.add(rect);
 
             }
             });
