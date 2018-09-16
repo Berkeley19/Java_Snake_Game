@@ -28,9 +28,8 @@ public class Main extends Application {
     private Timeline timeline = new Timeline();
 
     private ObservableList<Node> snake;
-    
 
-    private Parent makePage(){
+    private Parent makeGame(){
         Pane root = new Pane();
 
         return root;
@@ -38,7 +37,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Scene scene = new Scene(makePage());
+        Scene scene = new Scene(makeGame());
         primaryStage.setTitle("Snake game");
         primaryStage.setScene(scene);
         primaryStage.show();
